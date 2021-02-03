@@ -2,6 +2,9 @@
 rm -rf ./ssl
 mkdir -p ssl
 
+echo '============'
+echo 'Creating the certificates for dex (it will create the necessary certs for the demo)'
+echo '============'
 cat << EOF > ssl/req.cnf
 [req]
 req_extensions = v3_req
