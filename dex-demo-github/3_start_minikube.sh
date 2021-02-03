@@ -5,7 +5,6 @@ echo 'Create the minikube cluster.'
 echo '============'
 
 minikube start --memory=4096 \
- --vm-driver=virtualbox \
   --network-plugin=cni \
   --enable-default-cni \
   --extra-config=apiserver.authorization-mode=RBAC \
