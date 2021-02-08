@@ -16,7 +16,7 @@ spec:
     spec:
       serviceAccountName: dex # This is created below
       containers:
-      - image: quay.io/dexidp/dex:v2.27.0
+      - image: quay.io/dexidp/dex:v2.26.0
         name: dex
         command: ["/usr/local/bin/dex", "serve", "/etc/dex/cfg/config.yaml"]
 
@@ -113,7 +113,7 @@ metadata:
     app: dex
   name: dex
 ---
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: dex
@@ -125,7 +125,7 @@ rules:
   resources: ["customresourcedefinitions"]
   verbs: ["create"] # To manage its own resources, dex must be able to create customresourcedefinitions
 ---
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   name: dex
@@ -136,4 +136,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: dex           # Service account assigned to the dex pod, created above
-  namespace: default  # The namespace dex is running in
+  namespace: dex  # The namespace dex is running in
