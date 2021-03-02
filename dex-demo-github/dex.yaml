@@ -5,7 +5,7 @@ metadata:
     app: dex
   name: dex
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: dex
@@ -79,7 +79,8 @@ data:
         clientSecret: $GITHUB_CLIENT_SECRET
         redirectURI: https://dex.example.com:32000/callback
         orgs:
-        - name: spantree
+        - name: che-incubator
+        - name: codenvy
     oauth2:
       skipApprovalScreen: false
 
