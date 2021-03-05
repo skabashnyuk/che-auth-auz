@@ -78,8 +78,8 @@ data:
         clientID: $GITHUB_CLIENT_ID
         clientSecret: $GITHUB_CLIENT_SECRET
         redirectURI: https://dex.example.com:32000/callback
+        loadAllGroups: true
         orgs:
-        - name: che-incubator
         - name: codenvy
     oauth2:
       skipApprovalScreen: false
