@@ -1,0 +1,7 @@
+ - Setup env variables DEX_GITHUB_CLIENT_ID DEX_GITHUB_CLIENT_SECRET 
+ - 1_gencert_v2.sh
+ - 2_cert_to_minikube.sh
+ - 3_start_minikube.sh
+ - 4_fix_hosts.sh
+ - 7_fix_minikube_hosts.sh
+ - 8_run_test_app.sh
